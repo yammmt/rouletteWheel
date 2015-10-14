@@ -12,24 +12,33 @@
     console.log(itemsToShow);
     var items = {};
     for(var i=0; i < itemsToShow; i++){
-      items[i] = 'ITEM ' + (i+1);
+      items[i] = '進捗 ' + (i+1);
     }
+
+    //$('canvas').height(window.innerWidth).width(window.innerHeight);
+
     $('#canvas').rouletteWheel({
       items : items,
       selected : function(key, value){
         alert('SELECTED : ' + key + ' => ' + value);
       },
-      spinText : 'Click Me',
+      spinText : 'PROGRESS',
     });
 
   });
   </script>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
   <title>Roulette_js</title>
 </head>
 
 <body>
 
-  <canvas id="canvas" width="500" height="300"></canvas>
+  <canvas id="canvas" width="1440" height="700"></canvas>
 	
 </body>
 </html>
